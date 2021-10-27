@@ -39,7 +39,8 @@ export default {
             control: { type: 'boolean' }
         },
         rows: {
-            control: { type: 'number' }
+            control: { type: 'number' },
+            defaultValue:1
         },
         color: {
             control: { type: 'color' },

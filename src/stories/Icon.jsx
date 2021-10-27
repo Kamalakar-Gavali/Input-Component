@@ -4,23 +4,23 @@ import LockIcon from "@mui/icons-material/Lock";
 import SearchIcon from "@mui/icons-material/Search";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 let fontSize = '23px';
-const Icon = ({ iconName }) => {
+const Icon = ({ iconName ,padding}) => {
 
     switch (iconName) {
         case 'search':
-            return <SearchIcon sx={{ fontSize: fontSize }} />
+            return <SearchIcon sx={{ fontSize: fontSize ,paddingTop: padding && padding}} />
             break;
         case 'lock':
-            return <LockIcon sx={{ fontSize: fontSize }} />
+            return <LockIcon sx={{ fontSize: fontSize ,paddingTop: padding &&padding}} />
             break;
         case 'visibility':
-            return <VisibilityIcon sx={{ fontSize: fontSize }} />
+            return <VisibilityIcon sx={{ fontSize: fontSize,paddingTop: padding && padding }} />
             break;
         case 'cart':
-            return <ShoppingCartIcon sx={{ fontSize: fontSize }} />
+            return <ShoppingCartIcon sx={{ fontSize: fontSize,paddingTop: padding && padding }} />
             break;
         case 'delete':
-            return <DeleteIcon sx={{ fontSize: fontSize }} />
+            return <DeleteIcon sx={{ fontSize: fontSize ,paddingTop: padding && padding}} />
             break;
         default:
             return null;
