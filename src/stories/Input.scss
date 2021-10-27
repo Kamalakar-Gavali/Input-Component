@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+$light-grey:#828282;
+$dark-grey:#333333;
+$blue:#2962FF;
+$red:#D32F2F;
+
+// *{
+//     box-sizing: border-box;
+// }
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    color:$dark-grey;
+label{
+    
+    font-size: 15px;
+    color:$dark-grey;
+    &.helperText{
+        font-size: 13px;
+    }
+    &:first-child{
+        order:-1
+    }
+    &:last-child{
+        order: 2;
+    }
+}
+div{
+    order:1;
+    width: 270px;
+    height: 58px;
+    border-radius: 8px;
+    border: 1px solid $light-grey;
+    display: flex;
+    justify-content: space-evenly;
+    
+    &.default{
+        border: 1px solid $light-grey;
+        &:hover{
+            border: 1px solid $dark-grey;
+            &~label{
+                color: $dark-grey;
+            }
+        }
+        &:focus-within{
+            border: 1px solid $blue;
+            outline: none!important;
+            &~label{
+                color: $blue;
+            }
+        }
+    }
+    &.error{
+        border: 1px solid $red;
+        &~label{
+            color: $red;
+        }
+        &:hover{
+            border: 1px solid $dark-grey;
+            &~label{
+                color: $dark-grey;
+            }
+        }
+        &:focus-within{
+            border: 1px solid $red;
+            outline: none!important;
+            &~label{
+                color: $red;
+            }
+        }
+    }
+    &.disabled{
+            background: #F2F2F2;
+            border: 1px solid $light-grey;
+            color: $dark-grey;
+            &:hover{
+                border: 1px solid $light-grey;
+            }
+           
+        }
+    &.sm{
+        height: 40px;
+    }
+    &.md{
+        height: 56px;
+    }
+    &.fullWidth{
+        width: 100%;
+    }
+
+    
+
+input,textarea{
+
+    outline: none!important;
+    border: none!important;
+    // padding: 18px 12px;
+    height: 35px;
+    font-family: Noto Sans JP;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    resize:none;
+
+}
+}
+
+}
